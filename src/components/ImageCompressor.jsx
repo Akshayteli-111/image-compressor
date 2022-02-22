@@ -40,7 +40,7 @@ class imageCompressor extends React.Component {
       useWebWorker: true
     };
 
-    if (options.maxSizeMB >= this.state.originalImage.size / 1024) {
+    if ((options.maxSizeMB >= this.state.originalImage.size / 1024) === false) {
       alert("Bring a bigger image");
       return 0;
     }
